@@ -25,3 +25,10 @@
 .logout-top{margin-inline-start:auto;border:1px solid var(--border);background:var(--panel);color:var(--red);border-radius:11px;padding:10px 14px;font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
 header .header-btn+.logout-top,header .actions+.logout-top{margin-inline-start:0}
 [dir=rtl] .header-btn{margin-right:auto}
+
+/* Scrollable sidebar: everything scrolls together, Sign out stays the last item */
+.sidebar{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin}
+.sidebar>*{flex-shrink:0}
+.side-bottom{padding-top:18px}
+#logoutBtn{margin-top:2px;border:1px solid color-mix(in srgb,var(--red) 35%,transparent);justify-content:center;font-weight:700}
+#logoutBtn:hover{background:color-mix(in srgb,var(--red) 12%,transparent)}
